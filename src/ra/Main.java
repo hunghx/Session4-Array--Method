@@ -1,3 +1,5 @@
+package ra;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -54,25 +56,32 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         // bài toán nhạp xuất dữ liệu mảng 2 chiều
-        System.out.println("Nhập vao số hàng m =");
-        int m = sc.nextInt();
-        System.out.println("Nhập vao số cột n =");
-        int n = sc.nextInt();
-        int[][] matrix = new int[m][n];
-        // nhập lần lượt giá trị cho mảng
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.printf("\nNhập giá trị cho matrix[%d][%d]= ",i,j);
-                matrix[i][j] = sc.nextInt();
-            }
-        }
-        System.out.println("Các giá trị vừa nhập là");
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.printf("%-5d",matrix[i][j]);
-            }
-            System.out.println();
-        }
+//        System.out.println("Nhập vao số hàng m =");
+//        int m = sc.nextInt();
+//        System.out.println("Nhập vao số cột n =");
+//        int n = sc.nextInt();
+//        int[][] matrix = new int[m][n];
+//        // nhập lần lượt giá trị cho mảng
+//        for (int i = 0; i < m; i++) {
+//            for (int j = 0; j < n; j++) {
+//                System.out.printf("\nNhập giá trị cho matrix[%d][%d]= ",i,j);
+//                matrix[i][j] = sc.nextInt();
+//            }
+//        }
+//        System.out.println("Các giá trị vừa nhập là");
+//        for (int i = 0; i < matrix.length; i++) {
+//            for (int j = 0; j < matrix[i].length; j++) {
+//                System.out.printf("%-5d",matrix[i][j]);
+//            }
+//            System.out.println();
+//        }
 
+        System.out.println(isDivideTo3(7));
     }
+
+    // tạo phương thức kiểm tra chia hết
+    public static boolean isDivideTo3(int number){
+        return number%3==0;
+    }
+
 }
